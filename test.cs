@@ -12,7 +12,7 @@ namespace DatalayerFs.Serializers
 
         bool IReadCondition<RepositoryRow>.Matches(ref RepositoryRow current)
         {
-            return current.Id == mTargetId;
+            return current.Id == mTargetId; // Improve check
         }
 
         int mTargetId;
