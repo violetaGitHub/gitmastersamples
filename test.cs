@@ -15,7 +15,7 @@ namespace DatalayerFs.Serializers
             return current.Id == mTargetId;
         }
 
-        uint mTargetId;
+        int mTargetId;
     }
 
     internal class FindByRepositoryName : IReadCondition<RepositoryRow>
