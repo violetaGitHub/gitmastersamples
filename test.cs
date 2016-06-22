@@ -25,11 +25,6 @@ namespace DatalayerFs.Serializers
             mTargetName = name;
         }
 
-        bool IReadCondition<RepositoryRow>.Matches(ref RepositoryRow current)
-        {
-            return current.Name == mTargetName;
-        }
-
         string mTargetName;
     }
 
