@@ -10,11 +10,6 @@ namespace DatalayerFs.Serializers
             mTargetId = id;
         }
 
-        bool IReadCondition<RepositoryRow>.Matches(ref RepositoryRow current)
-        {
-            return current.Id == mTargetId;
-        }
-
         int mTargetId;
     }
 
