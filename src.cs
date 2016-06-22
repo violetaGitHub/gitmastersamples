@@ -37,8 +37,6 @@ namespace DatalayerFs.Serializers
         public static bool operator ==(RepositoryRow x, RepositoryRow y)
         {
             return x.Id == y.Id
-                && x.ModuleId == y.ModuleId
-                && x.ParentModuleId == y.ParentModuleId
                 && x.GuidHigh == y.GuidHigh
                 && x.GuidLow == y.GuidLow;
         }
