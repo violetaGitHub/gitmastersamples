@@ -11,7 +11,7 @@ namespace DatalayerFs.Serializers
         }
 
         bool IReadCondition<RepositoryRow>.Matches(ref RepositoryRow current)
-        {
+        {//change file
             return current.Id == mTargetId; // Improve check
         }
 
