@@ -28,7 +28,7 @@ namespace Codice.CM.Client.Gui
             InitializeComponent();
 
             InitializeTheme();
-
+//different change in main
             InitializeNodeBuilder();
 
             mCreateRepositoryCommand = new CreateRepositoryCommand();
