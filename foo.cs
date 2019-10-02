@@ -37,6 +37,25 @@ namespace GitMaster.LoginWindow
                 mGetLicenseButton.Click -= GetLicenseButton_Click;
         }
 
+        void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            ClearErrors();
+
+            LoginConfiguration.Data data = LoginConfiguration.Data.Build(
+                mUserTextBox.Text,
+                mPasswordTextBox.Text);
+
+            Login.ValidationResult result = Login.Validate(data);
+
+            if (!result.IsOk())
+            {
+                ShowErrors(result);
+                return;
+            }
+
+            Login.Run(mRestApi, data, mProgressControls, mLoginSuccessNotifier);
+        }
+
         internal void NotifyLicenseError(string message)
         {
             Children.Clear();

@@ -57,25 +57,6 @@ namespace GitMaster.LoginWindow
             mLoginWindow.ShowSignUpPanel();
         }
 
-        void LoginButton_Click(object sender, RoutedEventArgs e)
-        {
-            ClearErrors();
-
-            LoginConfiguration.Data data = LoginConfiguration.Data.Build(
-                mUserTextBox.Text,
-                mPasswordTextBox.Text);
-
-            Login.ValidationResult result = Login.Validate(data);
-
-            if (!result.IsOk())
-            {
-                ShowErrors(result);
-                return;
-            }
-
-            Login.Run(mRestApi, data, mProgressControls, mLoginSuccessNotifier);
-        }
-
         void ShowErrors(Login.ValidationResult result)
         {
             if (!string.IsNullOrEmpty(result.EncryptedPasswordError))
