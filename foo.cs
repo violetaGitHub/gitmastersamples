@@ -83,7 +83,7 @@ namespace GitMaster.LoginWindow
 
         Panel CreateContentPanel()
         {
-            StackPanel result = new StackPanel();
+            StackPanel result = new StackPanel(); //change method dst
 
             TextBlock titleTextBlock = WebControlBuilder.CreateTitle(
                 GitMasterLocalization.GetString(

@@ -61,7 +61,7 @@ namespace GitMaster.LoginWindow
         {
             ClearErrors();
 
-            LoginConfiguration.Data data = LoginConfiguration.Data.Build(
+            LoginConfiguration.Data data = LoginConfiguration.Data.Build( ///change method in dst
                 mUserTextBox.Text,
                 mPasswordTextBox.Text);
 
