@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
 
-using GitMasterGui;
+using GitMasterGui; //other changes 2233
 using GitMasterGui.Configuration;
 using GitMasterGui.License;
 using GitMasterGui.LoginWindow;
